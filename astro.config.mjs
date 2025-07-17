@@ -6,5 +6,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://lunalabscr.github.io",
+  base: "/zul-portfolio/",
   integrations: [react()],
 });
