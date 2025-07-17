@@ -1,0 +1,74 @@
+// src/styles/_mixins.scss
+// BREAKPOINTS
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Usage: @include container;
+@mixin container($max-width: 1200px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 3rem;
+  }
+}
+
+// Preset size containers
+@mixin container-sm {
+  @include container(640px);
+}
+
+@mixin container-md {
+  @include container(768px);
+}
+
+@mixin container-lg {
+  @include container(1024px);
+}
+
+@mixin container-xl {
+  @include container(1280px);
+}
+
+@mixin container-2xl {
+  @include container(1440px);
+}
+
+// Media query mixins
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-md - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}

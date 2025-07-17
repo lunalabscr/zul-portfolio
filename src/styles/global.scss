@@ -1,0 +1,22 @@
+@use "@styles/colors";
+
+@font-face {
+  font-family: "brown_sugarregular";
+  src: url("/fonts/brownsugar-webfont.woff2") format("woff2"),
+    url("/fonts/brownsugar-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "questrialregular";
+  src: url("/fonts/questrial-regular-webfont.woff2") format("woff2"),
+    url("/fonts/questrial-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background-color: colors.$light-yellow;
+  scroll-behavior: smooth;
+}

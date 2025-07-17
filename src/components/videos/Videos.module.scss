@@ -1,0 +1,32 @@
+@use "@styles/mixins";
+@use "@styles/colors";
+
+.videos {
+  width: 100%;
+  background-color: colors.$light-gray;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  &__video {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__iframe {
+    width: 320px;
+    height: 320px;
+
+    @include mixins.desktop {
+      width: 560px;
+      height: 315px;
+    }
+
+    @include mixins.desktop-xl {
+      width: 822px;
+      height: 462px;
+    }
+  }
+}

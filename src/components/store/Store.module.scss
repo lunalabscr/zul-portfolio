@@ -1,0 +1,84 @@
+@use "@styles/mixins";
+@use "@styles/colors";
+
+.store {
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$light-gray;
+
+  &__wrapper {
+    @include mixins.container;
+  }
+
+  &__text {
+    font-family: "questrialregular";
+    font-size: 18px;
+    max-width: 305px;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+
+    @include mixins.desktop-lg {
+      height: 100dvh;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__album-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include mixins.desktop-xl {
+      flex-direction: row;
+    }
+  }
+
+  &__album {
+    background-color: colors.$blue;
+    color: colors.$light-yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 34px;
+    width: 100%;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+
+      @include mixins.tablet {
+        gap: 0;
+        flex-direction: row;
+      }
+
+      @include mixins.desktop {
+        gap: 32px;
+        flex-direction: row;
+      }
+    }
+
+    &__style {
+      border: 0;
+      width: 320px;
+      height: 320px;
+
+      @include mixins.tablet {
+        width: 240px;
+        height: 240px;
+      }
+
+      @include mixins.desktop-xl {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}

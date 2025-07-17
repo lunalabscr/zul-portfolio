@@ -1,0 +1,42 @@
+@use "@styles/colors";
+@use "@styles/fonts";
+@use "@styles/mixins";
+
+.music {
+  color: colors.$light-gray;
+  background-color: colors.$dark-green;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    height: 100%;
+    @include mixins.container;
+
+    @include mixins.desktop-lg {
+      flex-direction: row;
+      height: 100vh;
+    }
+  }
+
+  &__title {
+    font-size: fonts.$xl-size;
+  }
+
+  &__text {
+    color: colors.$light-yellow;
+    font-family: "questrialregular";
+    max-width: 640px;
+  }
+}
+
+.iframe {
+  width: 100%;
+  max-width: 660px;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}

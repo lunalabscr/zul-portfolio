@@ -1,0 +1,95 @@
+@use "@styles/colors";
+@use "@styles/mixins";
+
+.header {
+  background-color: colors.$green;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s ease-in-out;
+
+  &--bio {
+    background-color: colors.$blue;
+  }
+  &--music {
+    background-color: colors.$green;
+  }
+
+  &--videos {
+    background-color: colors.$light-blue;
+  }
+
+  &--store {
+    background-color: colors.$green;
+  }
+
+  &--events {
+    background-color: colors.$light-green;
+  }
+
+  &--blog {
+    background-color: colors.$brown;
+  }
+
+  &--contact {
+    background-color: colors.$light-blue;
+  }
+
+  &__nav {
+    @include mixins.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: colors.$light-yellow;
+
+    @include mixins.desktop-lg {
+      height: 5rem;
+    }
+
+    &__ul {
+      display: none;
+
+      @include mixins.desktop-lg {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+      }
+    }
+
+    &__toggle {
+      display: block;
+      background-color: colors.$light-yellow;
+      color: colors.$green;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+
+      @include mixins.desktop-lg {
+        display: none;
+      }
+    }
+
+    &__open-menu {
+      max-height: 0;
+      overflow: hidden;
+
+      &--open {
+        position: absolute;
+        max-height: auto;
+        width: 100%;
+        padding: 1rem;
+        background-color: colors.$light-yellow;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: colors.$light-green;
+      }
+    }
+  }
+}

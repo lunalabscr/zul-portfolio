@@ -1,0 +1,45 @@
+@use "@styles/colors";
+@use "@styles/mixins";
+@use "@styles/fonts";
+
+.bio {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.desktop-lg {
+    flex-direction: row;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__title {
+    font-size: fonts.$xl-size;
+    color: colors.$brown;
+  }
+
+  &__article {
+    @include mixins.container;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__text {
+    font-family: "questrialregular";
+    max-width: 640px;
+  }
+}
+
+.full-height-image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+
+  @media (max-width: 768px) {
+    object-position: top; // For example, prioritize top of image on mobile
+  }
+}
