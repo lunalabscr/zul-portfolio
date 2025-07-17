@@ -12,7 +12,10 @@ export const Store = () => {
             <br /> También están disponibles los discos de las bandas de las que
             formo parte.
           </p>
-          <img src="/images/bandcamp.png" width={"320px"} />
+          <img
+            src={import.meta.env.BASE_URL + "images/bandcamp.png"}
+            width={"320px"}
+          />
         </section>
         <section className={styles["store__album-section"]}>
           <article className={styles.store__album}>

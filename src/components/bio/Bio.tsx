@@ -4,7 +4,7 @@ export const Bio = () => {
   return (
     <section className={styles.bio} id="bio">
       <img
-        src="/images/ORBITA-42.jpg"
+        src={import.meta.env.BASE_URL + "images/ORBITA-42.jpg"}
         className={styles["full-height-image"]}
       />
       <article className={styles["bio__article"]}>
