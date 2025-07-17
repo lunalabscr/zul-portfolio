@@ -16,6 +16,46 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "the_seasonsbold";
+  src: url("fontspring-demo-theseasons-bd-webfont.woff2") format("woff2"),
+    url("fontspring-demo-theseasons-bd-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsbold_italic";
+  src: url("fontspring-demo-theseasons-bdit-webfont.woff2") format("woff2"),
+    url("fontspring-demo-theseasons-bdit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsitalic";
+  src: url("fontspring-demo-theseasons-it-webfont.woff2") format("woff2"),
+    url("fontspring-demo-theseasons-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonslight_italic";
+  src: url("fontspring-demo-theseasons-ltit-webfont.woff2") format("woff2"),
+    url("fontspring-demo-theseasons-ltit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsregular";
+  src: url("fontspring-demo-theseasons-reg-webfont.woff2") format("woff2"),
+    url("fontspring-demo-theseasons-reg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   background-color: colors.$light-yellow;
   scroll-behavior: smooth;

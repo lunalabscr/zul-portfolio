@@ -32,7 +32,9 @@ export const Header = () => {
   return (
     <header className={`${styles.header} ${styles[`header--${null}`]}`}>
       <nav className={styles.header__nav}>
-        <h1>Samantha Zul</h1>
+        <a href="#home">
+          <h1 className={styles.header__title}>Samantha Zul</h1>
+        </a>
         <button
           onClick={toggleNavigation}
           className={styles.header__nav__toggle}

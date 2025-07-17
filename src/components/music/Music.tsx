@@ -2,7 +2,7 @@ import styles from "./Music.module.scss";
 
 export const Music = () => {
   return (
-    <section className={styles.music}>
+    <section className={styles.music} id="music">
       <div className={styles.music__wrapper}>
         <article>
           <h2 className={styles.music__title}>Musica</h2>

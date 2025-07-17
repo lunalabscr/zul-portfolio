@@ -2,7 +2,7 @@ import styles from "./Store.module.scss";
 
 export const Store = () => {
   return (
-    <div className={styles.store}>
+    <div className={styles.store} id="store">
       <div className={styles.store__wrapper}>
         <section className={styles.store__section}>
           <p className={styles.store__text}>
