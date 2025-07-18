@@ -21,7 +21,12 @@ export const Header = () => {
 
   const pageLinks = useMemo(() => {
     return pages.map((item) => (
-      <li key={item.name}>
+      <li
+        key={item.name}
+        onClick={() => {
+          setNavOpen(false);
+        }}
+      >
         <a href={item.path} className={styles["header__nav__link"]}>
           {item.name}
         </a>

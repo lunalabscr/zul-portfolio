@@ -9,8 +9,11 @@
   transition: background-color 0.3s ease-in-out;
 
   &__title {
-    font-size: 42px;
+    font-size: 24px;
     cursor: pointer;
+    @include mixins.desktop-lg {
+      font-size: 42px;
+    }
   }
 
   &--bio {

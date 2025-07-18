@@ -1,0 +1,79 @@
+@use "@styles/colors";
+@use "@styles/mixins";
+
+.concerts {
+  width: 100%;
+  background-color: colors.$black;
+
+  @include mixins.desktop-lg {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    @include mixins.desktop-lg {
+      flex-direction: row;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // @include mixins.container;
+  }
+  &__image-wrapper {
+    height: 100%;
+    width: 100%;
+
+    @include mixins.desktop-lg {
+      width: 70%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  &__title-wrapper {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 2px solid colors.$dark-orange;
+  }
+
+  &__article-element {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: "the_seasonsregular";
+    color: colors.$light-green;
+  }
+
+  &__text {
+    color: colors.$light-brown;
+    font-family: "the_seasonsregular";
+    font-size: 24px;
+  }
+
+  &__sub {
+    font-family: "questrialregular";
+    font-size: 18px;
+    color: colors.$light-green;
+    max-width: 630px;
+    text-align: center;
+  }
+}
