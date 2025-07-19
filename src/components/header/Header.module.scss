@@ -16,6 +16,10 @@
     }
   }
 
+  &__title-events {
+    color: colors.$black;
+  }
+
   &--bio {
     background-color: colors.$blue;
   }
@@ -24,7 +28,7 @@
   }
 
   &--videos {
-    background-color: colors.$light-blue;
+    background-color: colors.$green;
   }
 
   &--store {

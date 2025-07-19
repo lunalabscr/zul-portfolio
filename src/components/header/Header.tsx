@@ -1,8 +1,22 @@
-import { useMemo, useState } from "react";
+import { act, useMemo, useState } from "react";
 import styles from "./Header.module.scss";
+import { useHeaderColor } from "src/hooks/useHeaderColor";
+import clsx from "clsx";
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const sectionIds = [
+    "home",
+    "bio",
+    "music",
+    "videos",
+    "store",
+    "events",
+    // "lavanda",
+    // "blog",
+    // "contact"
+  ];
+  const activeSection = useHeaderColor(sectionIds);
 
   const toggleNavigation = () => {
     setNavOpen(!navOpen);
@@ -18,6 +32,7 @@ export const Header = () => {
     // { name: "Blog", path: "#blog" },
     // { name: "Contacto", path: "#contact" },
   ];
+  console.log(activeSection === "events");
 
   const pageLinks = useMemo(() => {
     return pages.map((item) => (
@@ -27,18 +42,33 @@ export const Header = () => {
           setNavOpen(false);
         }}
       >
-        <a href={item.path} className={styles["header__nav__link"]}>
+        <a
+          href={item.path}
+          className={clsx(
+            styles["header__nav__link"],
+            styles[`header__title-${activeSection}`]
+          )}
+        >
           {item.name}
         </a>
       </li>
     ));
-  }, []);
+  }, [activeSection]);
 
   return (
-    <header className={`${styles.header} ${styles[`header--${null}`]}`}>
+    <header
+      className={`${styles.header} ${styles[`header--${activeSection}`]}`}
+    >
       <nav className={styles.header__nav}>
         <a href="#home">
-          <h1 className={styles.header__title}>Samantha Zul</h1>
+          <h1
+            className={clsx(
+              styles.header__title,
+              styles[`header__title-${activeSection}`]
+            )}
+          >
+            Samantha Zul
+          </h1>
         </a>
         <button
           onClick={toggleNavigation}
