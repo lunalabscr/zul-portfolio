@@ -14,9 +14,9 @@ export const Header = () => {
     { name: "Videos", path: "#videos" },
     { name: "Tienda", path: "#store" },
     { name: "Conciertos", path: "#events" },
-    { name: "Espacio Lavanda", path: "#lavanda" },
-    { name: "Blog", path: "#blog" },
-    { name: "Contacto", path: "#contact" },
+    // { name: "Espacio Lavanda", path: "#lavanda" },
+    // { name: "Blog", path: "#blog" },
+    // { name: "Contacto", path: "#contact" },
   ];
 
   const pageLinks = useMemo(() => {

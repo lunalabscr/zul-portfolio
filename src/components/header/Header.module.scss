@@ -69,6 +69,7 @@
       display: block;
       background-color: colors.$light-yellow;
       color: colors.$green;
+      font-family: "the_seasonsbold";
       border: none;
       padding: 10px;
       cursor: pointer;
@@ -79,14 +80,19 @@
     }
 
     &__open-menu {
-      max-height: 0;
+      position: absolute;
+      height: 0px;
       overflow: hidden;
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+      background-color: colors.$light-yellow;
 
       &--open {
-        position: absolute;
-        max-height: auto;
+        overflow: hidden;
+        height: 200px;
         width: 100%;
         padding: 1rem;
+        transition: all 0.2s ease-in-out;
         background-color: colors.$light-yellow;
       }
     }

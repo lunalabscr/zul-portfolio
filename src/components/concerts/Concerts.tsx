@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export const Concerts = () => {
   return (
-    <section className={styles.concerts}>
+    <section className={styles.concerts} id="events">
       <div className={styles["concerts__wrapper"]}>
         <div className={styles["concerts__image-wrapper"]}>
           <img
