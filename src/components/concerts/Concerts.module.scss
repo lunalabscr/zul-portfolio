@@ -4,6 +4,7 @@
 .concerts {
   width: 100%;
   background-color: colors.$black;
+  height: 100dvh;
 
   @include mixins.desktop-lg {
     height: 100%;
