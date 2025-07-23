@@ -29,15 +29,14 @@
   &__text {
     color: colors.$light-yellow;
     font-family: "questrialregular";
+    font-size: fonts.$md-size;
     max-width: 640px;
   }
 }
 
 .iframe {
-  width: 100%;
+  @include mixins.iframe-responsive;
   max-width: 660px;
   min-height: 500px;
-  overflow: hidden;
-  border-radius: 10px;
   padding-top: 2rem;
 }

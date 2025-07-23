@@ -1,39 +1,40 @@
+import { useState, useEffect } from "react";
 import styles from "./Music.module.scss";
+import { useLanguage, useTranslations } from "../../i18n/utils";
 
 export const Music = () => {
+  const [isClient, setIsClient] = useState(false);
+  const lang = useLanguage();
+  const t = useTranslations(lang);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className={styles.music} id="music">
       <div className={styles.music__wrapper}>
         <article>
-          <h2 className={styles.music__title}>Musica</h2>
-          <p className={styles.music__text}>
-            La música del álbum “Órbita Plantae” se estrenó en todas las
-            plataformas digitales de streaming este 2025, refleja el esfuerzo y
-            dedicación de Samantha Zul y la banda con quienes grabó las
-            canciones; un viaje de grabación entre el estudio El Nido (Bocas del
-            Toro) y su propio estudio Oso Caballo (San Pedro). Se acompaña de
-            los coros de Beatriz Morales, el bajo de Ramón Morales, los solos y
-            acompañamientos de guitarra eléctrica de Agustín Azofeifa y la
-            fuerza de la batería y darbuka de Diana Avellán.
-          </p>
+          <h2 className={styles.music__title}>{t("music.title")}</h2>
+          <p className={styles.music__text}>{t("music.text.paragraph1")}</p>
           <br />
 
-          <p className={styles.music__text}>
-            Sus letras y sonoridades transportan al oyente a aquellos espacios
-            naturales donde tenemos la paz para hablar con nosotros mismos y
-            reflexionar sobre la vida con sus altos y bajos. Además, su forma de
-            cantar es una mezcla de suavidad y potencia, que se integra con cada
-            palabra cantada.
-          </p>
+          <p className={styles.music__text}>{t("music.text.paragraph2")}</p>
         </article>
-        <iframe
-          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-          frameBorder="0"
-          height="450"
-          className={styles.iframe}
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.music.apple.com/cr/album/%C3%B3rbita-plantae-ep/1808618082"
-        ></iframe>
+        {isClient ? (
+          <iframe
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameBorder="0"
+            height="450"
+            className={styles.iframe}
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/cr/album/%C3%B3rbita-plantae-ep/1808618082"
+          ></iframe>
+        ) : (
+          <div style={{ height: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0f0f0', borderRadius: '10px' }}>
+            <p>Loading music player...</p>
+          </div>
+        )}
       </div>
     </section>
   );

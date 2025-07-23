@@ -1,13 +1,14 @@
 @use "@styles/colors";
 @use "@styles/mixins";
+@use "@styles/fonts";
 
 .concerts {
   width: 100%;
   background-color: colors.$black;
-  height: 100dvh;
+  height: fit-content;
 
   @include mixins.desktop-lg {
-    height: 100%;
+    height: 100dvh;
   }
 
   &__wrapper {
@@ -27,7 +28,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    // @include mixins.container;
   }
   &__image-wrapper {
     height: 100%;
@@ -59,20 +59,21 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: fonts.$lg-size;
     font-family: "the_seasonsregular";
     color: colors.$light-green;
+    text-align: center;
   }
 
   &__text {
     color: colors.$light-brown;
     font-family: "the_seasonsregular";
-    font-size: 24px;
+    font-size: fonts.$lg-size;
   }
 
   &__sub {
     font-family: "questrialregular";
-    font-size: 18px;
+    font-size: fonts.$md-size;
     color: colors.$light-green;
     max-width: 630px;
     text-align: center;

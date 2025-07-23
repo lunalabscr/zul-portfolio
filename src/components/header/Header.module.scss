@@ -1,5 +1,6 @@
 @use "@styles/colors";
 @use "@styles/mixins";
+@use "@styles/fonts";
 
 .header {
   background-color: colors.$green;
@@ -9,11 +10,15 @@
   transition: background-color 0.3s ease-in-out;
 
   &__title {
-    font-size: 24px;
+    font-size: fonts.$lg-size;
     cursor: pointer;
     @include mixins.desktop-lg {
-      font-size: 42px;
+      font-size: fonts.$xl-size;
     }
+  }
+
+  &__toggle-events {
+    color: colors.$black;
   }
 
   &__title-events {
@@ -71,15 +76,21 @@
 
     &__toggle {
       display: block;
-      background-color: colors.$light-yellow;
-      color: colors.$green;
-      font-family: "the_seasonsbold";
-      border: none;
-      padding: 10px;
       cursor: pointer;
+      height: 24px;
+      width: 24px;
+      color: colors.$light-yellow;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: color 0.3s ease-in-out;
 
       @include mixins.desktop-lg {
         display: none;
+      }
+
+      &:hover {
+        opacity: 0.8;
       }
     }
 
@@ -103,7 +114,7 @@
 
     &__link {
       text-decoration: none;
-      font-size: 17px;
+      font-size: fonts.$sm-size;
       font-family: "the_seasonsregular";
 
       &:hover {

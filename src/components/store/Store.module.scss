@@ -1,5 +1,6 @@
 @use "@styles/mixins";
 @use "@styles/colors";
+@use "@styles/fonts";
 
 .store {
   display: flex;
@@ -12,7 +13,7 @@
 
   &__text {
     font-family: "questrialregular";
-    font-size: 18px;
+    font-size: fonts.$md-size;
     max-width: 305px;
   }
   &__section {
@@ -68,8 +69,7 @@
     }
 
     &__style {
-      border: 0;
-      width: 100%;
+      @include mixins.iframe-responsive;
       height: 200px;
 
       @include mixins.desktop-xl {

@@ -1,0 +1,50 @@
+---
+import { languages } from "../i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl();
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="language-picker">
+  {
+    Object.entries(languages).map(([langCode, label]) => (
+      <a
+        href={translatePath("/", langCode)}
+        class={`language-link ${langCode === lang ? "active" : ""}`}
+        aria-label={`Switch to ${label}`}
+      >
+        {label}
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .language-picker {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .language-link {
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    color: inherit;
+    opacity: 0.7;
+  }
+
+  .language-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+
+  .language-link.active {
+    opacity: 1;
+    text-decoration: underline;
+  }
+</style>

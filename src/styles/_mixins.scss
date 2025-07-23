@@ -72,3 +72,11 @@ $breakpoint-xl: 1280px;
     @content;
   }
 }
+
+// Common iframe styling
+@mixin iframe-responsive {
+  border: 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}

@@ -1,38 +1,27 @@
-import { act, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import styles from "./Header.module.scss";
 import { useHeaderColor } from "src/hooks/useHeaderColor";
 import clsx from "clsx";
+import { useLanguage, useTranslations } from "../../i18n/utils";
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const sectionIds = [
-    "home",
-    "bio",
-    "music",
-    "videos",
-    "store",
-    "events",
-    // "lavanda",
-    // "blog",
-    // "contact"
-  ];
+  const sectionIds = ["home", "bio", "music", "videos", "store", "events"];
   const activeSection = useHeaderColor(sectionIds);
+  const lang = useLanguage();
+  const t = useTranslations(lang);
 
   const toggleNavigation = () => {
     setNavOpen(!navOpen);
   };
 
   const pages = [
-    { name: "Bio", path: "#bio" },
-    { name: "Musica", path: "#music" },
-    { name: "Videos", path: "#videos" },
-    { name: "Tienda", path: "#store" },
-    { name: "Conciertos", path: "#events" },
-    // { name: "Espacio Lavanda", path: "#lavanda" },
-    // { name: "Blog", path: "#blog" },
-    // { name: "Contacto", path: "#contact" },
+    { name: t("nav.bio"), path: "#bio" },
+    { name: t("nav.music"), path: "#music" },
+    { name: t("nav.videos"), path: "#videos" },
+    { name: t("nav.store"), path: "#store" },
+    { name: t("nav.concerts"), path: "#events" },
   ];
-  console.log(activeSection === "events");
 
   const pageLinks = useMemo(() => {
     return pages.map((item) => (
@@ -72,9 +61,26 @@ export const Header = () => {
         </a>
         <button
           onClick={toggleNavigation}
-          className={styles.header__nav__toggle}
+          className={clsx(
+            styles.header__nav__toggle,
+            styles[`header__toggle-${activeSection}`]
+          )}
         >
-          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className={`menu-icon ${styles[`header__toggle-${activeSection}`]}`}
+            height="100%"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </button>
         <ul className={styles["header__nav__ul"]}>{pageLinks}</ul>
       </nav>

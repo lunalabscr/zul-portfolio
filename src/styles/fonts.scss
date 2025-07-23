@@ -1,1 +1,62 @@
+// Font sizes
 $xl-size: 42px;
+$lg-size: 24px;
+$md-size: 18px;
+$sm-size: 17px;
+
+// Font declarations
+@font-face {
+  font-family: "brown_sugarregular";
+  src: url("/fonts/brownsugar-webfont.woff2") format("woff2"),
+    url("/fonts/brownsugar-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "questrialregular";
+  src: url("/fonts/questrial-regular-webfont.woff2") format("woff2"),
+    url("/fonts/questrial-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsbold";
+  src: url("/fonts/fontspring-demo-theseasons-bd-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-demo-theseasons-bd-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsbold_italic";
+  src: url("/fonts/fontspring-demo-theseasons-bdit-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-demo-theseasons-bdit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsitalic";
+  src: url("/fonts/fontspring-demo-theseasons-it-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-demo-theseasons-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonslight_italic";
+  src: url("/fonts/fontspring-demo-theseasons-ltit-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-demo-theseasons-ltit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "the_seasonsregular";
+  src: url("/fonts/fontspring-demo-theseasons-reg-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-demo-theseasons-reg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
