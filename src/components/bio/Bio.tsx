@@ -9,7 +9,17 @@ export const Bio = () => {
     <section className={styles.bio} id="bio">
       <img
         src={import.meta.env.BASE_URL + "images/ORBITA-42.webp"}
+        srcSet={`
+          ${import.meta.env.BASE_URL}images/ORBITA-42-480.webp 480w,
+          ${import.meta.env.BASE_URL}images/ORBITA-42-768.webp 768w,
+          ${import.meta.env.BASE_URL}images/ORBITA-42-1200.webp 1200w,
+          ${import.meta.env.BASE_URL}images/ORBITA-42.webp 1920w
+        `}
+        sizes="(max-width: 768px) 100vw, 50vw"
         className={styles["full-height-image"]}
+        alt="Samantha Zul - Foto biográfica, artista musical"
+        loading="lazy"
+        decoding="async"
       />
       <article className={styles["bio__article"]}>
         <h2 className={styles.bio__title}>{t("bio.title")}</h2>

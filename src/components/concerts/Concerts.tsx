@@ -13,7 +13,16 @@ export const Concerts = () => {
           <img
             className={styles["concerts__image"]}
             src={import.meta.env.BASE_URL + "images/ORBITA-29.webp"}
-            alt=""
+            srcSet={`
+              ${import.meta.env.BASE_URL}images/ORBITA-29-480.webp 480w,
+              ${import.meta.env.BASE_URL}images/ORBITA-29-768.webp 768w,
+              ${import.meta.env.BASE_URL}images/ORBITA-29-1200.webp 1200w,
+              ${import.meta.env.BASE_URL}images/ORBITA-29.webp 1920w
+            `}
+            sizes="(max-width: 768px) 100vw, 70vw"
+            alt="Samantha Zul - Imagen de concierto, presentación en vivo"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <article className={styles["concerts__article"]}>

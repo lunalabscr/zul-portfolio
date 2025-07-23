@@ -24,6 +24,8 @@ export const Store = () => {
           <img
             src={import.meta.env.BASE_URL + "images/bandcamp.png"}
             width={"320px"}
+            alt="Available on Bandcamp"
+            loading="lazy"
           />
         </section>
         <section className={styles["store__album-section"]}>
@@ -52,7 +54,16 @@ export const Store = () => {
                   </iframe>
                 </>
               ) : (
-                <div style={{ height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0f0f0', borderRadius: '10px' }}>
+                <div
+                  style={{
+                    height: "400px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "#f0f0f0",
+                    borderRadius: "10px",
+                  }}
+                >
                   <p>Loading music player...</p>
                 </div>
               )}
@@ -83,7 +94,16 @@ export const Store = () => {
                   </iframe>
                 </>
               ) : (
-                <div style={{ height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0f0f0', borderRadius: '10px' }}>
+                <div
+                  style={{
+                    height: "400px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "#f0f0f0",
+                    borderRadius: "10px",
+                  }}
+                >
                   <p>Loading music player...</p>
                 </div>
               )}

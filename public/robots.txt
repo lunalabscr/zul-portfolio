@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /images/
+Allow: /fonts/
+Allow: /#bio
+Allow: /#music
+Allow: /#videos
+Allow: /#store
+Allow: /#events
+
+# Sitemap
+Sitemap: https://samanthazul.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

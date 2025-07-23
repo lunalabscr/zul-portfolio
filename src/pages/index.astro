@@ -8,21 +8,177 @@ import { Music } from "@components/music/Music";
 import { Store } from "@components/store/Store";
 import { Videos } from "@components/videos/Videos";
 import { Concerts } from "@components/concerts/Concerts";
-const pageTitle = "Samantha Zul";
+
+// SEO Configuration
+const siteTitle =
+  "Samantha Zul - Artista Musical Costarricense | Costa Rica Artist";
+const siteDescription =
+  "Samantha Zul, artista musical interdisciplinaria de Costa Rica. Descubre su EP 'Órbita Plantae' y su universo sonoro único que conecta naturaleza y emociones humanas.";
+const siteKeywords =
+  "Samantha Zul, artista musical, Costa Rica, música costarricense, Órbita Plantae, artista interdisciplinaria, música independiente, cantautora, EP, álbum";
+const siteUrl = "https://samanthazul.com"; // Replace with your actual domain
+const imageUrl = `${siteUrl}/images/ORBITA-11.webp`;
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Basic SEO Meta Tags -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="keywords" content={siteKeywords} />
+    <meta name="author" content="Samantha Zul" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Viewport and Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#366529" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Favicons -->
     <link
       rel="icon"
-      href={import.meta.env.BASE_URL + "/favicon.ico"}
+      href={import.meta.env.BASE_URL + "favicon.ico"}
       type="image/x-icon"
     />
+    <link
+      rel="apple-touch-icon"
+      href={import.meta.env.BASE_URL + "images/apple-touch-icon.png"}
+    />
 
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <!-- Preload critical images -->
+    <link
+      rel="preload"
+      as="image"
+      href={import.meta.env.BASE_URL + "images/ORBITA-11-placeholder.webp"}
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href={import.meta.env.BASE_URL + "images/ORBITA-11-768.webp"}
+      media="(max-width: 768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href={import.meta.env.BASE_URL + "images/ORBITA-11-1200.webp"}
+      media="(min-width: 769px)"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:site_name" content="Samantha Zul" />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:creator" content="@samanthazul" />
+
+    <!-- Music Platform Meta -->
+    <meta property="music:musician" content="Samantha Zul" />
+    <meta property="music:album" content="Órbita Plantae" />
+    <meta property="music:release_date" content="2025" />
+
+    <!-- Geographic SEO -->
+    <meta name="geo.region" content="CR" />
+    <meta name="geo.country" content="Costa Rica" />
+    <meta name="ICBM" content="9.7489, -83.7534" />
+    <meta name="geo.position" content="9.7489;-83.7534" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "#samantha-zul",
+            "name": "Samantha Zul",
+            "alternateName": "Samantha",
+            "description": "Artista musical interdisciplinaria de Costa Rica, cantautora y compositora del EP 'Órbita Plantae'",
+            "nationality": "Costa Rica",
+            "birthPlace": {
+              "@type": "Country",
+              "name": "Costa Rica"
+            },
+            "occupation": ["Musician", "Singer", "Songwriter", "Artist"],
+            "genre": ["Indie", "Alternative", "Folk", "World Music"],
+            "url": "https://samanthazul.com",
+            "image": "https://samanthazul.com/images/ORBITA-11.webp",
+            "sameAs": [
+              "https://ilelubitas.bandcamp.com",
+              "https://lechedecoco.bandcamp.com",
+              "https://embed.music.apple.com/cr/album/órbita-plantae-ep/1808618082"
+            ]
+          },
+          {
+            "@type": "MusicAlbum",
+            "@id": "#orbita-plantae",
+            "name": "Órbita Plantae",
+            "alternateName": "Orbita Plantae EP",
+            "albumProductionType": "http://schema.org/StudioAlbum",
+            "albumReleaseType": "http://schema.org/EPRelease",
+            "datePublished": "2025",
+            "genre": ["Indie", "Alternative", "Folk"],
+            "byArtist": {
+              "@id": "#samantha-zul"
+            },
+            "recordLabel": "Independent",
+            "description": "EP debut de Samantha Zul que refleja su universo sonoro único conectando naturaleza y emociones humanas",
+            "image": "https://samanthazul.com/images/ORBITA-42.webp",
+            "url": "https://embed.music.apple.com/cr/album/órbita-plantae-ep/1808618082"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "url": "https://samanthazul.com",
+            "name": "Samantha Zul - Oficial",
+            "description": "Sitio web oficial de Samantha Zul, artista musical de Costa Rica",
+            "publisher": {
+              "@id": "#samantha-zul"
+            },
+            "inLanguage": ["es-CR", "en-US"],
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://samanthazul.com/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "#organization",
+            "name": "Samantha Zul Music",
+            "url": "https://samanthazul.com",
+            "logo": "https://samanthazul.com/images/logo.png",
+            "foundingLocation": {
+              "@type": "Country",
+              "name": "Costa Rica"
+            },
+            "founder": {
+              "@id": "#samantha-zul"
+            },
+            "sameAs": [
+              "https://ilelubitas.bandcamp.com",
+              "https://lechedecoco.bandcamp.com"
+            ]
+          }
+        ]
+      }
+    </script>
     <style>
       .full-height-image {
         height: 100vh;
@@ -34,19 +190,70 @@ const pageTitle = "Samantha Zul";
           object-position: top;
         }
       }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
   </head>
   <body>
     <Header client:load />
-    <img
-      id="home"
-      src={import.meta.env.BASE_URL + "images/ORBITA-11.webp"}
-      class="full-height-image"
-    />
-    <Bio client:visible />
-    <Music client:load />
-    <Videos client:load />
-    <Store client:load />
-    <Concerts client:visible />
+
+    <!-- Hero Section -->
+    <main>
+      <section id="home" aria-label="Samantha Zul - Artista Musical">
+        <img
+          class="full-height-image"
+          src={import.meta.env.BASE_URL + "images/ORBITA-11.webp"}
+          srcset={`
+              ${import.meta.env.BASE_URL}images/ORBITA-11-480.webp 480w,
+              ${import.meta.env.BASE_URL}images/ORBITA-11-768.webp 768w,
+              ${import.meta.env.BASE_URL}images/ORBITA-11-1200.webp 1200w,
+              ${import.meta.env.BASE_URL}images/ORBITA-11.webp 1920w
+            `}
+          sizes="(max-width: 768px) 100vw, 70vw"
+          alt="Samantha Zul"
+          loading="lazy"
+          decoding="async"
+        />
+        <h1 class="sr-only">Samantha Zul - Artista Musical de Costa Rica</h1>
+      </section>
+
+      <Bio client:visible />
+      <Music client:load />
+      <Videos client:load />
+      <Store client:load />
+      <Concerts client:visible />
+    </main>
+
+    <!-- Footer with additional SEO content -->
+    <footer
+      style="background: #0b1207; color: #fdf2e6; padding: 2rem; text-align: center;"
+    >
+      <p>&copy; 2025 Samantha Zul. Artista musical de Costa Rica.</p>
+      <p>Música independiente • Órbita Plantae EP • Cantautora costarricense</p>
+      <div style="margin-top: 1rem;">
+        <a
+          href="https://ilelubitas.bandcamp.com"
+          target="_blank"
+          rel="noopener"
+          style="color: #a5d174; margin: 0 1rem;">Bandcamp</a
+        >
+        <a
+          href="https://embed.music.apple.com/cr/album/órbita-plantae-ep/1808618082"
+          target="_blank"
+          rel="noopener"
+          style="color: #a5d174; margin: 0 1rem;">Apple Music</a
+        >
+      </div>
+    </footer>
   </body>
 </html>
