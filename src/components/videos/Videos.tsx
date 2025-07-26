@@ -35,7 +35,7 @@ export const Videos = () => {
               borderRadius: "10px",
               color: "#fff",
             }}
-            >
+          >
             <p>{t("videos.loading")}</p>
           </div>
         )}

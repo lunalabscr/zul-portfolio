@@ -24,6 +24,7 @@ export const Store = () => {
           </p>
           {isClient && (
             <iframe
+              title="Samantha Zul Bandcamp page"
               className={styles.store__album__orbita}
               src="https://bandcamp.com/EmbeddedPlayer/album=2498049681/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
               seamless
@@ -41,6 +42,7 @@ export const Store = () => {
               {isClient ? (
                 <>
                   <iframe
+                    title="Ilelubitas bandcamp page"
                     className={styles.store__album__style}
                     src="https://bandcamp.com/EmbeddedPlayer/album=916484642/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
                     seamless
@@ -50,6 +52,7 @@ export const Store = () => {
                     </a>
                   </iframe>
                   <iframe
+                    title="Ilelubitas bandcamp page"
                     className={styles.store__album__style}
                     src="https://bandcamp.com/EmbeddedPlayer/track=2571904613/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
                     seamless
@@ -81,6 +84,7 @@ export const Store = () => {
               {isClient ? (
                 <>
                   <iframe
+                    title="Leche de Coco bandcamp page"
                     className={styles.store__album__style}
                     src="https://bandcamp.com/EmbeddedPlayer/album=1537564219/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
                     seamless
@@ -90,6 +94,7 @@ export const Store = () => {
                     </a>
                   </iframe>
                   <iframe
+                    title="Leche de Coco bandcamp page"
                     className={styles.store__album__style}
                     src="https://bandcamp.com/EmbeddedPlayer/track=1452245062/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
                     seamless

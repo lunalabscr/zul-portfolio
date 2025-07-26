@@ -70,6 +70,7 @@ export const Header = () => {
           </h1>
         </a>
         <button
+          aria-label="Open navigation menu"
           onClick={toggleNavigation}
           className={clsx(
             styles.header__nav__toggle,

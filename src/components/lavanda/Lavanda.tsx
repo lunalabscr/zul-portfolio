@@ -17,6 +17,7 @@ export const Lavanda = () => {
       <div className={styles.lavanda__wrapper}>
         <div className={styles.lavanda__info}>
           <img
+            alt="Espacio Lavanda Yoga Studio"
             className={styles.lavanda__logo}
             src={import.meta.env.BASE_URL + "images/LAVANDA.webp"}
           />
