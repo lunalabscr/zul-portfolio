@@ -1,6 +1,0 @@
-import{u as t,j as s,a as n}from"./utils.DMToyIzG.js";import{e}from"./index.95d291e9.B4GlB8P-.js";import{c as r}from"./clsx.B-dksMZM.js";import"./index.1Jp-s5Xv.js";const d=()=>{const a=t(),c=n(a);return s.jsxs("section",{className:e.concerts,id:"events",children:[s.jsx("img",{className:e.concerts__image,src:"/images/ORBITA-29.webp",srcSet:`
-          /images/ORBITA-29-480.webp 480w,
-          /images/ORBITA-29-768.webp 768w,
-          /images/ORBITA-29-1200.webp 1200w,
-          /images/ORBITA-29.webp 1920w
-        `,sizes:"(max-width: 768px) 100vw, 70vw",alt:"Samantha Zul - Imagen de concierto, presentación en vivo",loading:"lazy",decoding:"async"}),s.jsxs("div",{className:e.concerts__parent,children:[s.jsxs("div",{className:e.concerts__wrapper,children:[s.jsx("p",{className:e.concerts__title,children:c("concerts.title")}),s.jsx("p",{className:e.concerts__sub,children:c("concerts.subtitle")})]}),s.jsxs("div",{className:r(e.concerts__wrapper),children:[s.jsxs("p",{className:e["concerts__secondary-text"],children:[c("store.band.ilelubitas")," "]}),s.jsxs("p",{className:e["concerts__secondary-sub"],children:[" ",c("concerts.event1.date")]}),s.jsx("p",{className:e["concerts__secondary-text"],children:c("store.band.leche")}),s.jsxs("p",{className:e["concerts__secondary-sub"],children:[" ",c("concerts.event2.date")]})]})]})]})};export{d as Concerts};
