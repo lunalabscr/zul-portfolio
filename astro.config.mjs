@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 // https://astro.build/config
 export default defineConfig({
-  site: isProduction ? "https://lunalabscr.github.io" : undefined,
-  base: isProduction ? "/zul-portfolio/" : "/",
+  site: isProduction ? "https://samanthazul.com" : undefined,
+  base: "/",
   integrations: [react()],
 });
