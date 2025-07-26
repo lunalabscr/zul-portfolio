@@ -51,8 +51,8 @@ export const ui = {
 
     // Concerts section
     "concerts.title": "Conciertos",
-    "concerts.subtitle": "Próxima presentación en vivo \"Órbita Plantae\"",
-    "concerts.title2": "en vivo de Órbita Plantae",
+    "concerts.subtitle": "Próxima presentación en vivo",
+    "concerts.title2": "en vivo de 'Órbita Plantae'",
     "concerts.event1.band": "ilelubitas",
     "concerts.event1.date":
       "Domingo, 28 de septiembre de 2025, Pococí, Festival Nacional de las Artes, Costa Rica.",
@@ -116,7 +116,7 @@ export const ui = {
 
     // Concerts section
     "concerts.title": "Concerts",
-    "concerts.subtitle": "Upcoming live presentation \"Órbita Plantae\"",
+    "concerts.subtitle": 'Upcoming live presentation "Órbita Plantae"',
     "concerts.title2": "Órbita Plantae",
     "concerts.event1.band": "ilelubitas",
     "concerts.event1.date":

@@ -23,11 +23,17 @@ export const Concerts = () => {
         decoding="async"
       />
       <div className={styles.concerts__parent}>
-        <div className={styles.concerts__wrapper}>
+        <div
+          className={clsx(
+            styles.concerts__wrapper,
+            styles["concerts__concert-wrapper"]
+          )}
+        >
           <p className={styles.concerts__title}>{t("concerts.title")}</p>
-          <p className={styles.concerts__sub}>
-            {t("concerts.subtitle")}
-          </p>
+          <div className={styles.concerts__sub}>
+            <p>{t("concerts.subtitle")}</p>
+            <p>{t("concerts.title2")}</p>
+          </div>
         </div>
         <div className={clsx(styles.concerts__wrapper)}>
           <p className={styles["concerts__secondary-text"]}>
