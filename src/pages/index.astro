@@ -230,34 +230,14 @@ const imageUrl = `${siteUrl}/images/ORBITA-11.webp`;
       </section>
 
       <Bio client:load />
-      <Music client:visible />
-      <Videos client:visible />
-      <Store client:visible />
-      <Concerts client:visible />
-      <Lavanda client:visible />
+      <Music client:visible={{ rootMargin: "100px" }} />
+      <Videos client:visible={{ rootMargin: "100px" }} />
+      <Store client:visible={{ rootMargin: "100px" }} />
+      <Concerts client:visible={{ rootMargin: "100px" }} />
+      <Lavanda client:visible={{ rootMargin: "100px" }} />
     </main>
 
     <!-- Footer with additional SEO content -->
-    <Contact client:visible />
-    <!-- <footer
-      style="background: #0b1207; color: #fdf2e6; padding: 2rem; text-align: center;"
-    >
-      <p>&copy; 2025 Samantha Zul. Artista musical de Costa Rica.</p>
-      <p>Música independiente • Órbita Plantae EP • Cantautora costarricense</p>
-      <div style="margin-top: 1rem;">
-        <a
-          href="https://ilelubitas.bandcamp.com"
-          target="_blank"
-          rel="noopener"
-          style="color: #a5d174; margin: 0 1rem;">Bandcamp</a
-        >
-        <a
-          href="https://embed.music.apple.com/cr/album/órbita-plantae-ep/1808618082"
-          target="_blank"
-          rel="noopener"
-          style="color: #a5d174; margin: 0 1rem;">Apple Music</a
-        >
-      </div>
-    </footer> -->
+    <Contact client:visible={{ rootMargin: "100px" }} />
   </body>
 </html>

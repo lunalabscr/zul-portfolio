@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   transition: background-color 0.3s ease-in-out;
+  border-bottom: 1px solid #0b12073d;
   z-index: 1;
 
   &__title {

@@ -43,7 +43,7 @@ export const Contact = () => {
   }, []);
 
   return (
-    <div className={styles.contact} id="contact">
+    <footer className={styles.contact} id="contact">
       <div className={styles["image-container"]}>
         <img
           alt="Samantha Zul  contact image"
@@ -56,6 +56,6 @@ export const Contact = () => {
         <p className={styles.contact__info__text}>{t("contact.text2")}</p>
         <div className={styles.contact__info__icons}>{getSocialMediaA}</div>
       </div>
-    </div>
+    </footer>
   );
 };

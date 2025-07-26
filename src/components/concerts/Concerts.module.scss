@@ -5,15 +5,14 @@
 .concerts {
   width: 100%;
   background-color: colors.$dark-green;
-  height: 100%;
   display: flex;
   flex-direction: column;
   scroll-margin-top: 68px;
+  height: 100dvh;
 
   @include mixins.desktop-lg {
     flex-direction: row;
     justify-content: space-between;
-    height: 100dvh;
     background-color: colors.$black;
   }
 
