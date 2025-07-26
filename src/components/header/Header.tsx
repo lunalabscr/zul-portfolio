@@ -76,28 +76,26 @@ export const Header = () => {
             styles[`header__toggle-${activeSection}`]
           )}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className={`menu-icon ${styles[`header__toggle-${activeSection}`]}`}
-            height="100%"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          {navOpen ? (
+            <i className={clsx("bi bi-x", styles["header__header-icon"])}></i>
+          ) : (
+            <i
+              className={clsx(
+                "bi bi-list",
+                styles["header__header-icon"],
+                styles[`header__toggle-${activeSection}`]
+              )}
+            ></i>
+          )}
         </button>
         <ul className={styles["header__nav__ul"]}>{pageLinks}</ul>
       </nav>
       <ul
         className={styles[`header__nav__open-menu${navOpen ? "--open" : ""}`]}
       >
-        <p className={styles["header__nav__drawer-title"]}>Samantha Zul</p>
+        <a href="#home" onClick={toggleNavigation}>
+          <p className={styles["header__nav__drawer-title"]}>Samantha Zul</p>
+        </a>
         {pageLinks}
       </ul>
     </header>

@@ -18,6 +18,10 @@
     }
   }
 
+  &__header-icon {
+    font-size: x-large;
+  }
+
   &__toggle-events {
     color: colors.$black;
   }
@@ -78,7 +82,9 @@
     }
 
     &__toggle {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       height: 24px;
       width: 24px;

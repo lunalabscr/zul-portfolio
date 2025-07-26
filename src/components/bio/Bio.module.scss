@@ -5,6 +5,7 @@
 .bio {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 68px;
 
   @include mixins.desktop-lg {
     flex-direction: row;

@@ -5,6 +5,7 @@
 .contact {
   position: relative;
   width: 100%;
+  scroll-margin-top: 68px;
 
   &__info {
     @include mixins.container;
