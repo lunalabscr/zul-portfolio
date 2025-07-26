@@ -1,0 +1,51 @@
+@use "@styles/mixins";
+@use "@styles/fonts";
+.lavanda {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  place-items: center;
+
+  @include mixins.desktop-lg {
+    height: 100dvh;
+  }
+
+  &__logo {
+    max-width: 300px;
+
+    @include mixins.desktop-lg {
+      max-width: 500px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100dvh;
+  }
+
+  &__info-text {
+    max-width: 300px;
+    @include mixins.desktop-lg {
+      max-width: 500px;
+      font-size: fonts.$md-size;
+    }
+  }
+
+  &__wrapper {
+    @include mixins.container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "questrialregular";
+
+    @include mixins.desktop-lg {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

@@ -24,6 +24,10 @@
 
   &__title {
     font-size: fonts.$xl-size;
+    text-align: center;
+    @include mixins.desktop-lg {
+      text-align: left;
+    }
   }
 
   &__text {

@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   transition: background-color 0.3s ease-in-out;
+  z-index: 1;
 
   &__title {
     font-size: fonts.$lg-size;
@@ -23,6 +24,8 @@
 
   &__title-events {
     color: colors.$black;
+    @include mixins.desktop {
+    }
   }
 
   &--bio {
@@ -99,26 +102,40 @@
       height: 0px;
       overflow: hidden;
       width: 100%;
-      transition: all 0.2s ease-in-out;
       background-color: colors.$light-yellow;
 
       &--open {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         overflow: hidden;
-        height: 200px;
+        gap: 2rem;
+        height: 100vh;
         width: 100%;
         padding: 1rem;
-        transition: all 0.2s ease-in-out;
-        background-color: colors.$light-yellow;
+        padding-top: 3rem;
+        background-color: colors.$dark-green-translucent;
       }
     }
 
+    &__drawer-title {
+      font-size: fonts.$xl-size;
+      color: colors.$light-yellow;
+    }
+
     &__link {
+      opacity: 1;
       text-decoration: none;
-      font-size: fonts.$sm-size;
+      font-size: fonts.$lg-size;
       font-family: "the_seasonsregular";
 
-      &:hover {
-        color: colors.$light-green;
+      @media (max-width: 768px) {
+        color: colors.$light-yellow;
+      }
+
+      @include mixins.desktop-lg {
+        font-size: fonts.$md-size;
       }
     }
   }

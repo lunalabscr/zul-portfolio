@@ -14,6 +14,7 @@ export const Store = () => {
   return (
     <div className={styles.store} id="store">
       <div className={styles.store__wrapper}>
+        <p className={styles.store__title}>{t("store.title")}</p>
         <section className={styles.store__section}>
           <p className={styles.store__text}>
             {t("store.text")}
@@ -21,12 +22,17 @@ export const Store = () => {
             <br />
             {t("store.text2")}
           </p>
-          <img
-            src={import.meta.env.BASE_URL + "images/bandcamp.png"}
-            width={"320px"}
-            alt="Available on Bandcamp"
-            loading="lazy"
-          />
+          {isClient && (
+            <iframe
+              className={styles.store__album__orbita}
+              src="https://bandcamp.com/EmbeddedPlayer/album=2498049681/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+              seamless
+            >
+              <a href="https://samanthazul.bandcamp.com/album/rbita-plantae">
+                Órbita Plantae by Samantha Zul
+              </a>
+            </iframe>
+          )}
         </section>
         <section className={styles["store__album-section"]}>
           <article className={styles.store__album}>
@@ -64,7 +70,7 @@ export const Store = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  <p>Loading music player...</p>
+                  <p>{t("store.loading.music")}</p>
                 </div>
               )}
             </div>
@@ -104,7 +110,7 @@ export const Store = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  <p>Loading music player...</p>
+                  <p>{t("store.loading.music")}</p>
                 </div>
               )}
             </div>

@@ -32,7 +32,7 @@ export const Music = () => {
           ></iframe>
         ) : (
           <div style={{ height: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f0f0f0', borderRadius: '10px' }}>
-            <p>Loading music player...</p>
+            <p>{t("store.loading.music")}</p>
           </div>
         )}
       </div>

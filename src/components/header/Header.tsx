@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./Header.module.scss";
 import { useHeaderColor } from "src/hooks/useHeaderColor";
 import clsx from "clsx";
@@ -21,7 +21,17 @@ export const Header = () => {
     { name: t("nav.videos"), path: "#videos" },
     { name: t("nav.store"), path: "#store" },
     { name: t("nav.concerts"), path: "#events" },
+    { name: t("nav.lavanda"), path: "#lavanda" },
+    { name: t("nav.contact"), path: "#contact" },
   ];
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [navOpen]);
 
   const pageLinks = useMemo(() => {
     return pages.map((item) => (
@@ -35,7 +45,7 @@ export const Header = () => {
           href={item.path}
           className={clsx(
             styles["header__nav__link"],
-            styles[`header__title-${activeSection}`]
+            styles[`header__title-${activeSection}`] // Ensure this class exists
           )}
         >
           {item.name}
@@ -87,6 +97,7 @@ export const Header = () => {
       <ul
         className={styles[`header__nav__open-menu${navOpen ? "--open" : ""}`]}
       >
+        <p className={styles["header__nav__drawer-title"]}>Samantha Zul</p>
         {pageLinks}
       </ul>
     </header>

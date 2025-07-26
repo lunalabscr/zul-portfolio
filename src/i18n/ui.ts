@@ -14,6 +14,8 @@ export const ui = {
     "nav.videos": "Videos",
     "nav.store": "Tienda",
     "nav.concerts": "Conciertos",
+    "nav.lavanda": "Lavanda",
+    "nav.contact": "Contacto",
 
     // Bio section
     "bio.title": "BIO",
@@ -39,8 +41,17 @@ export const ui = {
     "store.band.ilelubitas": "En Ilelubitas",
     "store.band.leche": "En Leche de Coco",
 
+    // Videos section
+    "videos.title": "Videos",
+    "videos.loading": "Cargando video...",
+
+    // Store section - additional
+    "store.title": "Tienda",
+    "store.loading.music": "Cargando reproductor de música...",
+
     // Concerts section
-    "concerts.title": "Próximamente presentación",
+    "concerts.title": "Conciertos",
+    "concerts.subtitle": "Próxima presentación en vivo \"Órbita Plantae\"",
     "concerts.title2": "en vivo de Órbita Plantae",
     "concerts.event1.band": "ilelubitas",
     "concerts.event1.date":
@@ -48,6 +59,14 @@ export const ui = {
     "concerts.event2.band": "Leche de Coco",
     "concerts.event2.date":
       "Jueves 2 de octubre de 2025, Matina, Festival Nacional de las Artes, Costa Rica.",
+
+    // Lavanda section
+    "lavanda.text":
+      "Es un espacio alternativo dirigido por Samantha, se ofrecen clases de yoga y asesorías de diseño de interiores conscientes, con el objetivo de acompañarte en tu camino hacia el bienestar integral: Cultivando la conexión con tu cuerpo y tu mente, y también con el espacio que habitás.",
+
+    // Contact section
+    "contact.text1": "Para ponerte en contacto, escribí al correo en el ícono.",
+    "contact.text2": "Seguí las redes sociales para estar al tanto.",
 
     // Meta
     "site.title": "Samantha Zul - Artista Musical",
@@ -61,6 +80,8 @@ export const ui = {
     "nav.videos": "Videos",
     "nav.store": "Store",
     "nav.concerts": "Concerts",
+    "nav.lavanda": "Lavanda",
+    "nav.contact": "Contact",
 
     // Bio section
     "bio.title": "BIO",
@@ -85,8 +106,17 @@ export const ui = {
     "store.band.ilelubitas": "With Ilelubitas",
     "store.band.leche": "With Leche de Coco",
 
+    // Videos section
+    "videos.title": "Videos",
+    "videos.loading": "Loading video...",
+
+    // Store section - additional
+    "store.title": "Store",
+    "store.loading.music": "Loading music player...",
+
     // Concerts section
-    "concerts.title": "Upcoming live presentation of",
+    "concerts.title": "Concerts",
+    "concerts.subtitle": "Upcoming live presentation \"Órbita Plantae\"",
     "concerts.title2": "Órbita Plantae",
     "concerts.event1.band": "ilelubitas",
     "concerts.event1.date":
@@ -94,6 +124,14 @@ export const ui = {
     "concerts.event2.band": "Leche de Coco",
     "concerts.event2.date":
       "Thursday, October 2, 2025, Matina, National Arts Festival, Costa Rica.",
+
+    // Lavanda section
+    "lavanda.text":
+      "It is an alternative space led by Samantha, offering yoga classes and conscious interior design consultations, with the goal of accompanying you on your path to integral wellbeing: Cultivating the connection with your body and mind, and also with the space you inhabit.",
+
+    // Contact section
+    "contact.text1": "To get in touch, write to the email in the icon.",
+    "contact.text2": "Follow the social media to stay updated.",
 
     // Meta
     "site.title": "Samantha Zul - Musical Artist",

@@ -4,78 +4,66 @@
 
 .concerts {
   width: 100%;
-  background-color: colors.$black;
-  height: fit-content;
+  background-color: colors.$dark-green;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   @include mixins.desktop-lg {
+    flex-direction: row;
+    justify-content: space-between;
     height: 100dvh;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-
-    @include mixins.desktop-lg {
-      flex-direction: row;
-    }
-  }
-
-  &__article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  &__image-wrapper {
-    height: 100%;
-    width: 100%;
-
-    @include mixins.desktop-lg {
-      width: 70%;
-    }
+    background-color: colors.$black;
   }
 
   &__image {
-    width: 100%;
     height: 100%;
-    object-fit: fill;
+    width: 100%;
+
+    @include mixins.desktop-lg {
+      width: 50%;
+    }
   }
 
-  &__title-wrapper {
-    width: 100%;
-    padding: 1rem;
-    border-bottom: 2px solid colors.$dark-orange;
-  }
-
-  &__article-element {
-    height: 100%;
+  &__parent {
+    @include mixins.container;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &__wrapper {
+    margin-top: 3rem;
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   &__title {
-    font-size: fonts.$lg-size;
-    font-family: "the_seasonsregular";
-    color: colors.$light-green;
+    font-size: fonts.$xl-size;
+    color: colors.$light-yellow;
     text-align: center;
   }
 
-  &__text {
-    color: colors.$light-brown;
+  &__secondary-text {
+    color: colors.$dark-orange;
     font-family: "the_seasonsregular";
-    font-size: fonts.$lg-size;
+    text-align: center;
+  }
+
+  &__secondary-sub {
+    color: colors.$light-green;
+    font-family: "questrialregular";
+    text-align: center;
   }
 
   &__sub {
-    font-family: "questrialregular";
-    font-size: fonts.$md-size;
     color: colors.$light-green;
-    max-width: 630px;
     text-align: center;
+    padding-block: 1rem;
+    max-width: 300px;
+    border-bottom: 2px solid colors.$brown;
+    font-family: "questrialregular";
   }
 }

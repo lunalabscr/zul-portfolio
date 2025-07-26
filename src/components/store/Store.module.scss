@@ -9,32 +9,46 @@
 
   &__wrapper {
     @include mixins.container;
+    @include mixins.desktop {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: fonts.$xl-size;
+    text-align: center;
+    @include mixins.desktop-lg {
+      text-align: left;
+      display: none;
+    }
   }
 
   &__text {
     font-family: "questrialregular";
     font-size: fonts.$md-size;
     max-width: 305px;
+    text-align: center;
   }
   &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    height: 100dvh;
 
     @include mixins.desktop-lg {
-      height: 100dvh;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
 
   &__album-section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: 100dvh;
     gap: 2rem;
-    margin-top: 1rem;
 
     @include mixins.desktop-xl {
       flex-direction: row;
@@ -53,24 +67,40 @@
 
     &__wrapper {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       gap: 1rem;
+    }
 
-      @include mixins.tablet {
-        gap: 0;
-        flex-direction: row;
+    &__orbita {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      max-width: 350px;
+      max-height: 470px;
+
+      @include mixins.mobile {
+        height: 470px;
       }
-
       @include mixins.desktop {
-        gap: 32px;
-        flex-direction: row;
+        height: 470px;
       }
     }
 
     &__style {
-      @include mixins.iframe-responsive;
-      height: 200px;
+      border: 0;
+      width: 100px;
+      height: 100px;
+
+      @media (min-width: 425px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include mixins.desktop {
+        width: 300px;
+        height: 300px;
+      }
 
       @include mixins.desktop-xl {
         width: 200px;
