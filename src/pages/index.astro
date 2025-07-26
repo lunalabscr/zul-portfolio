@@ -41,10 +41,19 @@ const imageUrl = `${siteUrl}/images/ORBITA-11.webp`;
 
     <!-- Canonical URL -->
     <link rel="canonical" href={siteUrl} />
+    <!-- Defer the link below to aboid unused css -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      />
+    </noscript>
 
     <!-- Favicons -->
     <link
@@ -220,10 +229,10 @@ const imageUrl = `${siteUrl}/images/ORBITA-11.webp`;
         />
       </section>
 
-      <Bio client:visible />
-      <Music client:load />
-      <Videos client:load />
-      <Store client:load />
+      <Bio client:load />
+      <Music client:visible />
+      <Videos client:visible />
+      <Store client:visible />
       <Concerts client:visible />
       <Lavanda client:visible />
     </main>

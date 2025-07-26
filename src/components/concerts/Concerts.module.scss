@@ -49,13 +49,13 @@
 
   &__secondary-text {
     color: colors.$dark-orange;
-    font-family: "the_seasonsregular";
+    font-family: "the_seasonsregular", sans-serif;
     text-align: center;
   }
 
   &__secondary-sub {
     color: colors.$light-green;
-    font-family: "questrialregular";
+    font-family: "questrialregular", sans-serif;
     text-align: center;
   }
 
@@ -65,6 +65,6 @@
     padding-block: 1rem;
     max-width: 300px;
     border-bottom: 2px solid colors.$brown;
-    font-family: "questrialregular";
+    font-family: "questrialregular", sans-serif;
   }
 }

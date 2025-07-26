@@ -17,7 +17,7 @@ export const Videos = () => {
         {isClient ? (
           <iframe
             className={styles.videos__iframe}
-            src="https://www.youtube.com/embed/WL7YcduiG3w?si=rxBgG_NUN54dGxqM"
+            src="https://www.youtube-nocookie.com/embed/WL7YcduiG3w?si=rxBgG_NUN54dGxqM"
             title="Zul Portfolio - Videos"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -44,7 +44,7 @@ export const Videos = () => {
         {isClient ? (
           <iframe
             className={styles.videos__iframe}
-            src="https://www.youtube.com/embed/GaXbUI8dLkg?si=JYp4_lf7iLiqBbok"
+            src="https://www.youtube-nocookie.com/embed/GaXbUI8dLkg?si=JYp4_lf7iLiqBbok"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

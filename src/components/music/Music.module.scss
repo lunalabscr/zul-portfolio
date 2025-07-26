@@ -33,7 +33,7 @@
 
   &__text {
     color: colors.$light-yellow;
-    font-family: "questrialregular";
+    font-family: "questrialregular", sans-serif;
     font-size: fonts.$md-size;
     max-width: 640px;
   }
