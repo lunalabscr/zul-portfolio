@@ -10,6 +10,7 @@
 
   &__wrapper {
     @include mixins.container;
+    padding-block: 2rem;
     @include mixins.desktop {
       margin-bottom: 5rem;
     }

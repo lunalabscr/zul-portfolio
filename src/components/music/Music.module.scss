@@ -9,13 +9,13 @@
   scroll-margin-top: 68px;
 
   &__wrapper {
+    @include mixins.container;
+    padding-block: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
     height: 100%;
-    @include mixins.container;
 
     @include mixins.desktop-lg {
       flex-direction: row;

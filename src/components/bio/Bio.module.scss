@@ -23,6 +23,7 @@
 
   &__article {
     @include mixins.container;
+    padding-block: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

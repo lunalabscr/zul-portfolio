@@ -51,7 +51,7 @@ export const ui = {
 
     // Concerts section
     "concerts.title": "Conciertos",
-    "concerts.subtitle": "Próxima presentación en vivo",
+    "concerts.subtitle": "Próxima presentación",
     "concerts.title2": "en vivo de 'Órbita Plantae'",
     "concerts.event1.band": "ilelubitas",
     "concerts.event1.date":
