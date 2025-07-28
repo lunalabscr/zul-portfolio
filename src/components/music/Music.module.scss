@@ -44,4 +44,8 @@
   max-width: 660px;
   min-height: 500px;
   padding-top: 2rem;
+
+  &__loading {
+    display: none;
+  }
 }

@@ -1,0 +1,19 @@
+@use "@styles/colors";
+.placeholder {
+  background-color: colors.$light-gray;
+  border-radius: 8px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Skeleton pulse effect */
+@keyframes pulse {
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}

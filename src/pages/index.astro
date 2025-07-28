@@ -230,14 +230,14 @@ const imageUrl = `${siteUrl}/images/ORBITA-11.webp`;
       </section>
 
       <Bio client:load />
-      <Music client:visible={{ rootMargin: "100px" }} />
-      <Videos client:visible={{ rootMargin: "100px" }} />
-      <Store client:visible={{ rootMargin: "100px" }} />
-      <Concerts client:visible={{ rootMargin: "100px" }} />
-      <Lavanda client:visible={{ rootMargin: "100px" }} />
+      <Music client:idle />
+      <Videos client:idle />
+      <Store client:idle />
+      <Concerts client:idle />
+      <Lavanda client:idle />
     </main>
 
     <!-- Footer with additional SEO content -->
-    <Contact client:visible={{ rootMargin: "100px" }} />
+    <Contact client:idle />
   </body>
 </html>
