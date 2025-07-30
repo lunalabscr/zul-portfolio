@@ -32,7 +32,7 @@ export const Store = () => {
           </p>
 
           <div className={styles.store__album__orbita}>
-            {isClient && (
+            {isClient ? (
               <>
                 {!orbitaLoaded && <Placeholder height={400} />}
 
@@ -49,6 +49,8 @@ export const Store = () => {
                   </a>
                 </iframe>
               </>
+            ) : (
+              <Placeholder height={"100%"} />
             )}
           </div>
         </section>
@@ -58,30 +60,35 @@ export const Store = () => {
             <h3>{t("store.band.ilelubitas")}</h3>
             <div className={styles.store__album__wrapper}>
               <div className={styles.store__album__item}>
-                {!ilelubitasAlbumLoaded && <Placeholder height={"100%"} />}
-                {isClient && (
-                  <iframe
-                    style={{
-                      visibility: ilelubitasAlbumLoaded ? "visible" : "hidden",
-                    }}
-                    onLoad={() => setIlelubitasAlbumLoaded(true)}
-                    title="Ilelubitas bandcamp page"
-                    className={styles.store__album__style}
-                    src="https://bandcamp.com/EmbeddedPlayer/album=916484642/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-                    seamless
-                  >
-                    <a href="https://ilelubitas.bandcamp.com/album/ilelubitas-en-el-arrecife-coralino">
-                      Ilelubitas en el Arrecife Coralino by Ilelubitas
-                    </a>
-                  </iframe>
+                {isClient ? (
+                  <>
+                    {!ilelubitasAlbumLoaded && <Placeholder height={"100%"} />}
+                    <iframe
+                      style={{
+                        visibility: ilelubitasAlbumLoaded
+                          ? "visible"
+                          : "hidden",
+                      }}
+                      onLoad={() => setIlelubitasAlbumLoaded(true)}
+                      title="Ilelubitas bandcamp page"
+                      className={styles.store__album__style}
+                      src="https://bandcamp.com/EmbeddedPlayer/album=916484642/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+                      seamless
+                    >
+                      <a href="https://ilelubitas.bandcamp.com/album/ilelubitas-en-el-arrecife-coralino">
+                        Ilelubitas en el Arrecife Coralino by Ilelubitas
+                      </a>
+                    </iframe>
+                  </>
+                ) : (
+                  <Placeholder height={"100%"} />
                 )}
               </div>
 
               <div className={styles.store__album__item}>
-                {isClient && (
+                {isClient ? (
                   <>
                     {!ilelubitasTrackLoaded && <Placeholder height={"100%"} />}
-
                     <iframe
                       style={{
                         visibility: ilelubitasTrackLoaded
@@ -99,6 +106,8 @@ export const Store = () => {
                       </a>
                     </iframe>
                   </>
+                ) : (
+                  <Placeholder height={"100%"} />
                 )}
               </div>
             </div>
@@ -108,42 +117,50 @@ export const Store = () => {
             <h3>{t("store.band.leche")}</h3>
             <div className={styles.store__album__wrapper}>
               <div className={styles.store__album__item}>
-                {!lecheAlbumLoaded && <Placeholder height={"100%"} />}
-                {isClient && (
-                  <iframe
-                    title="Leche de Coco bandcamp page"
-                    className={styles.store__album__style}
-                    src="https://bandcamp.com/EmbeddedPlayer/album=1537564219/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-                    seamless
-                    style={{
-                      visibility: lecheAlbumLoaded ? "visible" : "hidden",
-                    }}
-                    onLoad={() => setLecheAlbumLoaded(true)}
-                  >
-                    <a href="https://ccecr.bandcamp.com/album/la-movida-can-bal-5">
-                      La Movida Caníbal by Leche de Coco
-                    </a>
-                  </iframe>
+                {isClient ? (
+                  <>
+                    {!lecheAlbumLoaded && <Placeholder height={"100%"} />}
+                    <iframe
+                      title="Leche de Coco bandcamp page"
+                      className={styles.store__album__style}
+                      src="https://bandcamp.com/EmbeddedPlayer/album=1537564219/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+                      seamless
+                      style={{
+                        visibility: lecheAlbumLoaded ? "visible" : "hidden",
+                      }}
+                      onLoad={() => setLecheAlbumLoaded(true)}
+                    >
+                      <a href="https://ccecr.bandcamp.com/album/la-movida-can-bal-5">
+                        La Movida Caníbal by Leche de Coco
+                      </a>
+                    </iframe>
+                  </>
+                ) : (
+                  <Placeholder height={"100%"} />
                 )}
               </div>
 
               <div className={styles.store__album__item}>
-                {!lecheTrackLoaded && <Placeholder height={"100%"} />}
-                {isClient && (
-                  <iframe
-                    title="Leche de Coco bandcamp page"
-                    className={styles.store__album__style}
-                    src="https://bandcamp.com/EmbeddedPlayer/track=1452245062/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-                    seamless
-                    style={{
-                      visibility: lecheTrackLoaded ? "visible" : "hidden",
-                    }}
-                    onLoad={() => setLecheTrackLoaded(true)}
-                  >
-                    <a href="https://lechedecoco.bandcamp.com/track/the-old-friend">
-                      The Old Friend by Leche de Coco
-                    </a>
-                  </iframe>
+                {isClient ? (
+                  <>
+                    {!lecheTrackLoaded && <Placeholder height={"100%"} />}
+                    <iframe
+                      title="Leche de Coco bandcamp page"
+                      className={styles.store__album__style}
+                      src="https://bandcamp.com/EmbeddedPlayer/track=1452245062/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+                      seamless
+                      style={{
+                        visibility: lecheTrackLoaded ? "visible" : "hidden",
+                      }}
+                      onLoad={() => setLecheTrackLoaded(true)}
+                    >
+                      <a href="https://lechedecoco.bandcamp.com/track/the-old-friend">
+                        The Old Friend by Leche de Coco
+                      </a>
+                    </iframe>
+                  </>
+                ) : (
+                  <Placeholder height={"100%"} />
                 )}
               </div>
             </div>

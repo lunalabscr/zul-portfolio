@@ -21,37 +21,45 @@ export const Videos = () => {
 
       {/* Video 1 */}
       <div className={styles.videos__video}>
-        {!video1Loaded && <Placeholder height={320} />}
-        {isClient && (
-          <iframe
-            className={styles.videos__iframe}
-            src="https://www.youtube-nocookie.com/embed/WL7YcduiG3w?si=rxBgG_NUN54dGxqM"
-            title="Zul Portfolio - Videos"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            onLoad={() => setVideo1Loaded(true)}
-            style={{ visibility: video1Loaded ? "visible" : "hidden" }}
-          />
+        {isClient ? (
+          <>
+            {!video1Loaded && <Placeholder height={320} />}
+            <iframe
+              className={styles.videos__iframe}
+              src="https://www.youtube-nocookie.com/embed/WL7YcduiG3w?si=rxBgG_NUN54dGxqM"
+              title="Zul Portfolio - Videos"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onLoad={() => setVideo1Loaded(true)}
+              style={{ visibility: video1Loaded ? "visible" : "hidden" }}
+            />
+          </>
+        ) : (
+          <Placeholder height={320} />
         )}
       </div>
 
       {/* Video 2 */}
       <div className={styles.videos__video}>
-        {!video2Loaded && <Placeholder height={320} />}
-        {isClient && (
-          <iframe
-            className={styles.videos__iframe}
-            src="https://www.youtube-nocookie.com/embed/GaXbUI8dLkg?si=JYp4_lf7iLiqBbok"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            onLoad={() => setVideo2Loaded(true)}
-            style={{ visibility: video2Loaded ? "visible" : "hidden" }}
-          />
+        {isClient ? (
+          <>
+            {!video2Loaded && <Placeholder height={320} />}
+            <iframe
+              className={styles.videos__iframe}
+              src="https://www.youtube-nocookie.com/embed/GaXbUI8dLkg?si=JYp4_lf7iLiqBbok"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onLoad={() => setVideo2Loaded(true)}
+              style={{ visibility: video2Loaded ? "visible" : "hidden" }}
+            />
+          </>
+        ) : (
+          <Placeholder height={320} />
         )}
       </div>
     </div>
