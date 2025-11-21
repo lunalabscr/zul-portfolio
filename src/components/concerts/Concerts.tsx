@@ -33,9 +33,9 @@ export const Concerts = () => {
           <div className={styles.concerts__sub}>
             <p>{t("concerts.subtitle")}</p>
             <p>{t("concerts.title2")}</p>
+            <p className={styles.concerts__title}>{t("concerts.upcoming")}</p>
           </div>
         </div>
-        <p className={styles.concerts__title}>{t("concerts.upcoming")}</p>
         <div className={clsx(styles.concerts__wrapper)}>
           {/* <p className={styles["concerts__secondary-text"]}>
             {t("store.band.ilelubitas")}{" "}
