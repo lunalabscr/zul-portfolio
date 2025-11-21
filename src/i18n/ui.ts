@@ -59,6 +59,7 @@ export const ui = {
     "concerts.event2.band": "Leche de Coco",
     "concerts.event2.date":
       "Jueves 2 de octubre de 2025, Matina, Festival Nacional de las Artes, Costa Rica.",
+    "concerts.upcoming": "Próximamente",
 
     // Lavanda section
     "lavanda.text":
@@ -124,6 +125,7 @@ export const ui = {
     "concerts.event2.band": "Leche de Coco",
     "concerts.event2.date":
       "Thursday, October 2, 2025, Matina, National Arts Festival, Costa Rica.",
+    "concerts.upcoming": "Soon to be revealed",
 
     // Lavanda section
     "lavanda.text":
