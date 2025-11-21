@@ -21,7 +21,7 @@ const socialMedia = [
   },
   {
     icon: "bi bi-envelope-fill",
-    url: "samanthazulcostarica@gmail.com",
+    url: "mailto:samanthazulcostarica@gmail.com",
     name: "email",
   },
 ];

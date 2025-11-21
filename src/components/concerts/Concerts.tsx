@@ -36,7 +36,7 @@ export const Concerts = () => {
           </div>
         </div>
         <div className={clsx(styles.concerts__wrapper)}>
-          <p className={styles["concerts__secondary-text"]}>
+          {/* <p className={styles["concerts__secondary-text"]}>
             {t("store.band.ilelubitas")}{" "}
           </p>
           <p className={styles["concerts__secondary-sub"]}>
@@ -49,7 +49,7 @@ export const Concerts = () => {
           <p className={styles["concerts__secondary-sub"]}>
             {" "}
             {t("concerts.event2.date")}
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
